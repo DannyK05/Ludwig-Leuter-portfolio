@@ -180,6 +180,7 @@ span {
 }
 p {
   color: var(--white);
+  font-weight: 100 !important;
 }
 
 .button {
@@ -190,7 +191,8 @@ p {
   -moz-transition: 200ms ease;
   -ms-transition: 200ms ease;
   -o-transition: 200ms ease;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
   width: fit-content;
   padding: 13px 37px;
   font-weight: bold;
@@ -200,6 +202,7 @@ p {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
+  font-family: "avenir-light", sans-serif;
 }
 
 .button:hover {
@@ -251,7 +254,7 @@ h1 {
 }
 p {
   font-size: 25px;
-  line-height: 1.1;
+  line-height: 1.2;
   font-weight: lighter !important;
 }
 section p {
@@ -316,6 +319,8 @@ h2 {
   gap: 40px;
 }
 .contact p {
+  line-height: 1.4 !important;
+
   margin: 0;
 }
 .contact .links {
@@ -407,6 +412,9 @@ footer a {
   }
   section .content .text {
     gap: 20px !important;
+  }
+  section.contact {
+    max-width: 320px;
   }
   .showreel {
     padding: 50px 0 0 0;
