@@ -26,3 +26,8 @@
   src: url(/fonts/brandon-grotesque-light.otf) format(opentype);
   font-weight: lighter;
 }
+
+@font-face {
+  font-family: "brandon-thin";
+  src: url(/fonts/mplus-2p-thin.ttf) format(truetype);
+}
