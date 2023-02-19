@@ -1,0 +1,105 @@
+@import "/styles/variables.css";
+
+/* 
+  --imprint-background: #14326f;
+  --imprint-heading: #f09035;
+  --imprint-text: #f8d365;
+*/
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--imprint-background);
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--special-color);
+}
+/* global */
+body {
+  background-color: var(--imprint-background);
+  font-family: "barlow", sans-serif;
+  font-weight: lighter;
+}
+main#imprint section {
+  animation: fadeIn 1s ease forwards;
+  -webkit-animation: fadeIn 1s ease forwards;
+}
+/* add transition to all elements for page transition */
+section * {
+  transition: 300ms ease;
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  -ms-transition: 300ms ease;
+  -o-transition: 300ms ease;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--imprint-heading);
+  font-family: "barlow", sans-serif;
+}
+p {
+  margin: 0 !important;
+  max-width: unset !important;
+  margin-bottom: 40px !important;
+}
+ul {
+  list-style: unset;
+  padding-left: 65px;
+}
+p,
+ul li {
+  color: var(--imprint-text);
+  font-size: 30px;
+  line-height: 1.6;
+}
+p.within {
+  margin: 0 !important;
+}
+.break {
+  margin-bottom: 80px;
+}
+/* layout */
+.main {
+  padding-bottom: 0;
+}
+span {
+  text-decoration: underline;
+  color: var(--imprint-text);
+}
+h1 {
+  font-weight: bold;
+  font-size: 75px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* responsive */
+
+@media screen and (max-width: 767px) {
+  .title {
+    text-align: center;
+    font-size: 20px;
+  }
+  p,
+  ul li {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  p {
+    margin-bottom: 20px !important;
+  }
+  .break {
+    margin-bottom: 40px;
+  }
+}
