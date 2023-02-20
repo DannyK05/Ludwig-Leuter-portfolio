@@ -59,6 +59,6 @@ imprint.addEventListener(`click`, () => {
   footer.style.opacity = `0`;
   html.style.backgroundColor = `var(--imprint-background)`;
   setTimeout(() => {
-    location.href = `/imprint`;
+    location.href = `imprint/index.html`;
   }, 500);
 });

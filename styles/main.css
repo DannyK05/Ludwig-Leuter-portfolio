@@ -1,6 +1,36 @@
-/* include variables */
+/* variables */
+:root {
+  --background: #40161d;
+  --special-color: #efdfa9;
+  --button-background: #f2dea2;
+  --white: #fff;
+  --black: #000;
+  --state: rgb(166, 151, 146);
+  --state-text: #262625;
+  --button-text: #8b0000;
+  --imprint-background: #053373;
+  --imprint-heading: #ff8a00;
+  --imprint-text: #ffd14c;
+  --video-background: #282626;
+  --section-padding: 80px;
+}
 
-@import "/styles/variables.css";
+/* Include fonts from fonts file */
+@font-face {
+  font-family: "Avenir-light";
+  src: url(../fonts/Avenir\ Light.ttf) format(truetype);
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "Brandon-grotesque-light";
+  src: url(../fonts/brandon-grotesque-light.otf) format(opentype);
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "brandon-thin";
+  src: url(../fonts/mplus-2p-thin.ttf) format(truetype);
+}
 
 /* START Global styles */
 * {

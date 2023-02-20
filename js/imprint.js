@@ -22,6 +22,6 @@ goHome.addEventListener(`click`, () => {
   html.style.backgroundColor = `var(--background)`;
   // change location to next page
   setTimeout(() => {
-    location.href = `/`;
+    location.href = `../index.html`;
   }, 500);
 });
