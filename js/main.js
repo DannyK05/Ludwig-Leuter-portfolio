@@ -73,6 +73,7 @@ function onYouTubeIframeAPIReady() {
     const videoOverlay = thumbnail.querySelector(".video-overlay");
     const videoId = thumbnail.dataset.videoId;
     let player;
+    let hoverTimer;
 
     thumbnail.addEventListener("mouseenter", function() {
       if (!player) {

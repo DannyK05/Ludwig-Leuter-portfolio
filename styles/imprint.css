@@ -60,29 +60,40 @@ main#imprint section {
 }
 
 nav{
-  margin: 15px ;
-
+   margin: 3.5rem 0rem;
 }
 .content ul{
   color: var(--white);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding-left: 0px;
 }
 
-.content li{
+.content nav ul li{
+  margin-left: 20px;
   list-style: none;
-  font-size:  18px;
+  font-size: 1.2rem;
 }
-
 .content li:hover{
   text-decoration: underline ;
   color: rgba(255,255,255,0.8)
 }
 
+section {
+  padding: var(--section-padding) 0;
+  transition: 300ms ease;
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  -ms-transition: 300ms ease;
+  -o-transition: 300ms ease;
+}
+section .content {
+  margin-bottom: 20px;
+  gap: 100px;
+}
+
 section .content .links {
   display: flex;
-  
   align-self: flex-end;
   gap: 30px;
 }
@@ -101,39 +112,32 @@ section .content .links a {
 }
 section .content .links a:hover {
   fill: var(--special-color);
-
 }
-
 section.main {
   padding-top: 60px;
-}
-section .content {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  gap: 100px;
-}
-section .content .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
+section .content .name {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+
+
 h1:nth-child(1){
-  margin: 0px;
   font-family: 'Montserrat', sans-serif;
   color: var(--white);
-  font-size: 40px;
+  font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 0px;
   }
 
 h1:nth-child(2){
-    margin: 0px;
     color: var(--state);
-    font-size: 22px; 
-    font-weight: 300;
+    font-size: 1.5rem;
 }
-
 /* add transition to all elements for page transition */
 section * {
   transition: 300ms ease;
@@ -197,10 +201,10 @@ span {
 }
 h1.home {
   font-weight: bold;
-  font-size: 75px;
+  font-size: 4rem;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 5rem;
 }
 
 /* responsive */
@@ -219,10 +223,7 @@ h1.home {
     padding-left: 20px;
   }
   
-  section .content .links a {
-    position: absolute;
-    top: 175px;
-  }
+ 
   p {
     margin-bottom: 20px !important;
   }
