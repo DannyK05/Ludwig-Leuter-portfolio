@@ -62,3 +62,43 @@ imprint.addEventListener(`click`, () => {
     location.href = `imprint/index.html`;
   }, 500);
 });
+
+// playing video on hover
+
+function onYouTubeIframeAPIReady() {
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  const players = []; // Array to store YouTube players
+
+  thumbnails.forEach(function(thumbnail) {
+    const videoOverlay = thumbnail.querySelector(".video-overlay");
+    const videoId = thumbnail.dataset.videoId;
+    let player;
+
+    thumbnail.addEventListener("mouseenter", function() {
+      if (!player) {
+        player = new YT.Player(videoOverlay, {
+          videoId: videoId,
+          width: "100%",
+          height: "100%",
+          playerVars: {
+            autoplay: 1,
+            controls: 0,
+            rel: 0,
+            showinfo: 0
+          }
+        });
+        players.push(player);
+      } else {
+        player.playVideo();
+      }
+
+      this.querySelector('.video-overlay').style.display = "block";
+    });
+
+    thumbnail.addEventListener("mouseleave", function() {
+      player.stopVideo();
+      this.querySelector('.video-overlay').innerHTML = "";
+      this.querySelector('.video-overlay').style.display = "none";
+    });
+  });
+}

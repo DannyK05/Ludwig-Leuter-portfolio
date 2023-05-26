@@ -1,11 +1,11 @@
 /* variables */
 :root {
-  --background: #40161d;
-  --special-color: #efdfa9;
+  --background: #000000;
+  --special-color: rgb(140,24,45);
   --button-background: #f2dea2;
   --white: #fff;
   --black: #000;
-  --state: rgb(166, 151, 146);
+  --state: rgb(114,114,114);
   --state-text: #262625;
   --button-text: #8b0000;
   --imprint-background: #053373;
@@ -15,7 +15,9 @@
   --section-padding: 80px;
 }
 
+
 /* Include fonts from fonts file */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @font-face {
   font-family: "Avenir-light";
   src: url(../fonts/Avenir\ Light.ttf) format(truetype);
@@ -57,6 +59,7 @@ main {
   -ms-transition: 300ms ease;
   -o-transition: 300ms ease;
 }
+
 h1,
 h2,
 h3,
@@ -64,7 +67,7 @@ h4,
 h5 {
   font-family: "Avenir-light";
   font-weight: 300;
-  color: var(--special-color);
+  color: var(--white);
 }
 
 ul {
@@ -92,15 +95,13 @@ html {
   background-color: var(--background);
 }
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  padding: 0px 20px;
 }
 /* Set fixed with to the elements */
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 1150px;
   }
 }
 
@@ -111,7 +112,7 @@ html {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: var(--special-color);
+  background-color: var(--white);
 }
 
 /* END of global styles */
@@ -206,7 +207,7 @@ video {
 /* layout */
 
 span {
-  color: var(--special-color);
+  color: var(--white);
 }
 p {
   color: var(--white);
@@ -223,6 +224,7 @@ p {
   -o-transition: 200ms ease;
   font-size: 14px;
   font-weight: 700;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 13px 37px;
   font-weight: bold;
@@ -254,6 +256,20 @@ svg {
   max-height: 100%;
 }
 /* first section */
+nav{
+  margin: 20px;
+}
+.content ul{
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content li:hover{
+  text-decoration: underline ;
+  color: rgba(255,255,255,0.8)
+}
 
 section {
   padding: var(--section-padding) 0;
@@ -263,27 +279,57 @@ section {
   -ms-transition: 300ms ease;
   -o-transition: 300ms ease;
 }
-section.main {
-  padding-top: 150px;
-}
 section .content {
   display: flex;
   align-content: center;
   justify-content: space-between;
   gap: 100px;
 }
+
+section .content .links {
+  display: flex;
+  align-self: flex-end;
+  gap: 30px;
+}
+section .content .links a {
+  fill: rgb(73,173,189);
+  transition: 300ms ease;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  -ms-transition: 300ms ease;
+  -o-transition: 300ms ease;
+}
+section .content .links a:hover {
+  fill: var(--special-color);
+}
+section.main {
+  padding-top: 60px;
+}
+
 section .content .text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-h1 {
-  font-size: 50px;
-  font-weight: 300;
-  margin: 0;
+
+h1:nth-child(1){
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+  font-size: 40px;
+  font-weight: 700;
+  }
+
+h1:nth-child(2){
+    color: var(--state);
+    font-size: 26px; ;
 }
 p {
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: lighter !important;
 }
@@ -297,8 +343,8 @@ section p {
 .showreel {
   padding: var(--section-padding) 0 0 0;
   border: 1px solid transparent;
-  border-top-color: var(--state);
-  border-bottom-color: var(--state);
+  border-top-color: var(--special-color);
+  border-bottom-color: var(--special-color);
 }
 h2 {
   letter-spacing: 0.5px;
@@ -325,7 +371,7 @@ h2 {
   -o-border-radius: 50%;
 }
 #videoButton svg {
-  fill: var(--special-color);
+  fill: var(--white);
   transition: 300ms ease;
   -webkit-transition: 300ms ease;
   -moz-transition: 300ms ease;
@@ -333,12 +379,59 @@ h2 {
   -o-transition: 300ms ease;
 }
 #videoButton svg:hover {
-  fill: var(--state);
+  fill: var(--special-color);
 }
 .wreath {
   width: 130px;
   margin-top: -90px;
 }
+
+/* photoreel section */
+
+section.photo{
+border-bottom: 1px  solid var(--special-color);
+margin-bottom: 20px;
+padding: 50px;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.thumbnail {
+  position: relative;
+  width: 45%;
+  height: auto;
+  margin-top: 50px;
+  overflow: hidden;
+  
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.video-overlay iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
 
 /* contact section */
 
@@ -353,27 +446,7 @@ h2 {
 
   margin: 0;
 }
-.contact .links {
-  display: flex;
-  align-self: flex-end;
-  gap: 30px;
-}
-.contact .links a {
-  fill: var(--state);
-  transition: 300ms ease;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -webkit-transition: 300ms ease;
-  -moz-transition: 300ms ease;
-  -ms-transition: 300ms ease;
-  -o-transition: 300ms ease;
-}
-.contact .links a:hover {
-  fill: var(--special-color);
-}
+
 
 /* footer */
 
@@ -400,6 +473,15 @@ footer a {
   text-transform: uppercase;
   font-size: 14px;
 }
+ion-icon{
+  width: 50px;
+  height: 50px;
+  color:  rgb(73,173,189);
+}
+
+ion-icon:hover{
+  color: var(--special-color);
+}
 
 /* responsive */
 
@@ -423,6 +505,16 @@ footer a {
   .video_play_image {
     width: 50px;
   }
+
+  .thumbnail {
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin-top: 50px;
+    overflow: hidden;
+    
+  }
+
   section.main {
     padding-top: 50px;
   }
@@ -433,6 +525,10 @@ footer a {
   section.main .button {
     padding: 10px 20px;
     font-weight: bold;
+  }
+  section .content .links a {
+    position: absolute;
+    top: 175px;
   }
   section .content {
     flex-direction: column;
@@ -462,6 +558,10 @@ footer a {
   p {
     font-size: 16px !important;
     line-height: 1.6;
+  }
+
+  section.main nav li a{
+    margin-left: 60px;
   }
   section.main .text {
     align-items: center !important;

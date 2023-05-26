@@ -2,15 +2,14 @@
 :root {
   --background: #40161d;
   --special-color: #efdfa9;
+  --special-color: rgb(140,24,45);
   --button-background: #f2dea2;
   --white: #fff;
   --black: #000;
   --state: rgb(166, 151, 146);
   --state-text: #262625;
   --button-text: #8b0000;
-  --imprint-background: #053373;
-  --imprint-heading: #ff8a00;
-  --imprint-text: #ffd14c;
+  --imprint-background: #000;
   --video-background: #282626;
   --section-padding: 80px;
 }
@@ -59,6 +58,82 @@ main#imprint section {
   animation: fadeIn 1s ease forwards;
   -webkit-animation: fadeIn 1s ease forwards;
 }
+
+nav{
+  margin: 15px ;
+
+}
+.content ul{
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content li{
+  list-style: none;
+  font-size:  18px;
+}
+
+.content li:hover{
+  text-decoration: underline ;
+  color: rgba(255,255,255,0.8)
+}
+
+section .content .links {
+  display: flex;
+  
+  align-self: flex-end;
+  gap: 30px;
+}
+section .content .links a {
+  fill: rgb(73,173,189);
+  transition: 300ms ease;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  -ms-transition: 300ms ease;
+  -o-transition: 300ms ease;
+}
+section .content .links a:hover {
+  fill: var(--special-color);
+
+}
+
+section.main {
+  padding-top: 60px;
+}
+section .content {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+section .content .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1:nth-child(1){
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+  font-size: 40px;
+  font-weight: 700;
+  }
+
+h1:nth-child(2){
+    margin: 0px;
+    color: var(--state);
+    font-size: 22px; 
+    font-weight: 300;
+}
+
 /* add transition to all elements for page transition */
 section * {
   transition: 300ms ease;
@@ -72,7 +147,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: var(--imprint-heading);
+  color: var(--white);
   font-family: "barlow", sans-serif;
 }
 p {
@@ -86,7 +161,7 @@ ul {
 }
 p,
 ul li {
-  color: var(--imprint-text);
+  color: var(--white);
   font-size: 30px;
   line-height: 1.6;
 }
@@ -96,15 +171,31 @@ p.within {
 .break {
   margin-bottom: 80px;
 }
+
+ion-icon{
+  width: 50px;
+  height: 50px;
+  color:  rgb(73,173,189);
+}
+
+ion-icon:hover{
+  color: var(--special-color);
+}
+
+.quelle{
+  display: flex;
+  justify-content: space-between;
+}
+
 /* layout */
 .main {
   padding-bottom: 0;
 }
 span {
   text-decoration: underline;
-  color: var(--imprint-text);
+  color: var(--white);
 }
-h1 {
+h1.home {
   font-weight: bold;
   font-size: 75px;
   text-transform: uppercase;
@@ -126,6 +217,11 @@ h1 {
   }
   ul {
     padding-left: 20px;
+  }
+  
+  section .content .links a {
+    position: absolute;
+    top: 175px;
   }
   p {
     margin-bottom: 20px !important;
