@@ -96,7 +96,6 @@ html {
 }
 .container {
   margin: auto;
-  padding: 0px 20px;
 }
 /* Set fixed with to the elements */
 @media (min-width: 768px) {
@@ -257,15 +256,17 @@ svg {
 }
 /* first section */
 nav{
-  margin: 20px;
+  margin: 3.5rem 0rem;
 }
 .content ul{
   color: var(--white);
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
+.content nav ul li{
+  margin-right: 4rem;
+}
 .content li:hover{
   text-decoration: underline ;
   color: rgba(255,255,255,0.8)
@@ -280,9 +281,7 @@ section {
   -o-transition: 300ms ease;
 }
 section .content {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
+  margin-bottom: 20px;
   gap: 100px;
 }
 
@@ -309,27 +308,30 @@ section .content .links a:hover {
 }
 section.main {
   padding-top: 60px;
+  padding-bottom: 20px;
 }
 
-section .content .text {
+section .content .name {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+ 
 }
+
+
 
 h1:nth-child(1){
   font-family: 'Montserrat', sans-serif;
   color: var(--white);
-  font-size: 40px;
+  font-size: 3rem;
   font-weight: 700;
   }
 
 h1:nth-child(2){
     color: var(--state);
-    font-size: 26px; ;
+    font-size: 1.5rem ;
 }
 p {
-  font-size: 20px;
+  font-size: 1.2rem;
   line-height: 1.2;
   font-weight: lighter !important;
 }
@@ -391,12 +393,12 @@ h2 {
 section.photo{
 border-bottom: 1px  solid var(--special-color);
 margin-bottom: 20px;
-padding: 50px;
+padding: 50px 0px;
 }
 
 .thumbnails {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -446,6 +448,13 @@ padding: 50px;
 
   margin: 0;
 }
+
+.contact .content{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+} 
 
 
 /* footer */
@@ -526,10 +535,7 @@ ion-icon:hover{
     padding: 10px 20px;
     font-weight: bold;
   }
-  section .content .links a {
-    position: absolute;
-    top: 175px;
-  }
+  
   section .content {
     flex-direction: column;
     text-align: left;
@@ -555,13 +561,18 @@ ion-icon:hover{
     width: 130px;
     margin-bottom: -20px;
   }
+  
+  .thumbnail{
+    width: 100%;
+  }
+
   p {
     font-size: 16px !important;
     line-height: 1.6;
   }
 
   section.main nav li a{
-    margin-left: 60px;
+    margin-right: 7.8rem;
   }
   section.main .text {
     align-items: center !important;
