@@ -76,6 +76,8 @@ function onYouTubeIframeAPIReady() {
     let hoverTimer;
 
     thumbnail.addEventListener("mouseenter", function() {
+      clearTimeout(hoverTimer);
+      hoverTimer = setTimeout(() => {
       if (!player) {
         player = new YT.Player(videoOverlay, {
           videoId: videoId,
@@ -94,9 +96,11 @@ function onYouTubeIframeAPIReady() {
       }
 
       this.querySelector('.video-overlay').style.display = "block";
+    }, 800);
     });
 
     thumbnail.addEventListener("mouseleave", function() {
+      clearTimeout(hoverTimer);
       player.stopVideo();
       this.querySelector('.video-overlay').innerHTML = "";
       this.querySelector('.video-overlay').style.display = "none";
