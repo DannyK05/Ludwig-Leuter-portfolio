@@ -571,7 +571,7 @@ ion-icon:hover{
     line-height: 1.6;
   }
 
-  section.main nav li a:nth-child(1){
+  section.main nav li:nth-child(1){
     margin-right: 5rem;
   }
   section.main .text {
